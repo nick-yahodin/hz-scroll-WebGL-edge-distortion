@@ -1,0 +1,58 @@
+:root {
+  /* Palette — 1:1 from Figma "Folio / 2026" */
+  --bg: #d9d9d9;
+  --ink: #000000;
+
+  /* ABC Diatype (licensed) substituted with a neutral grotesk stack */
+  --font: "Helvetica Neue", Helvetica, "Inter", Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Hide the (vertical) scrollbar — the wheel/trackpad drives horizontal motion */
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+body {
+  scrollbar-width: none;
+}
+
+/* Gives <body> its scrollable height; width is irrelevant. */
+.spacer {
+  width: 1px;
+  pointer-events: none;
+}
+
+/* WebGL rail — fills the viewport (canvas is created by DistortionGallery). */
+.gl {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  display: block;
+  z-index: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
